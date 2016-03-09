@@ -5,7 +5,7 @@ end
 #puts @memory
 
 @cr3 = 544
-@addr = ARGV.count == 1 ? ARGV[0] : 0x6c74
+@addr = ARGV.count == 1 ? ARGV[0].to_i(16) : 0x6c74
 
 pde_index = (@addr & 0x7c00) >> 10
 pte_index = (@addr & 0x3e0) >> 5
